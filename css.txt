@@ -1,0 +1,7 @@
+Agregar freamwork de css y javascript 
+ir a getbootstrap.com
+dentro de la pagina ir a la seccion include bootstrap's css and js esto dentro de la pestaña docs
+copiar la etiqueta de link ir al archivo base.html
+y pegarlo debajo de la etiqueta de title
+y realizar lo mismo ahora con la etiqueta de script en la pagina copiarla
+y pegarla debajo de {% endblock %} que creamos

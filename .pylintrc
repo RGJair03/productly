@@ -1,0 +1,3 @@
+# 5- indicar al inter osea pylintrc que cargue el pylintrc que acabamos de instalar
+#     para ello debemos escribir en una linea load-plugins=pylint-django
+load-plugins=pylint-django

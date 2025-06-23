@@ -1,0 +1,41 @@
+# pipenv funcionara para trabajar de forma local django
+# es ventaja cuando se requiere trabajar en proyectos de django con diferentes versiones
+# vamos a instalar pipenv install django==4.1.7
+# despues ingresar al ambiente virtual con pipenv shell
+# ahora toca indicar a django que tiene que crear un proyecto dentro de esta carpeta:
+# para ello abrimos la terminal integrada y nos aseguramos de que estamos en el ambiente virtual
+# despues debemos instalar una herramienta administrativa que viene incluida con django
+# la cual se instala con: django-admin startproject [nombredelproyecto] .
+# despues escribir lo siguiente en la terminal integrada: python manage.py runserver
+
+# Para crear una aplicacion en django se escribe en la terminal:
+# python manage.py startapp [nombre de la aplicacion]
+
+# la carpeta de migrations se encargara de mantener los cambios
+# que se le haran a una base de datos los archivos ___init__.py indican que son
+# paquetes
+
+# en admin.py podremos registrar nuestros modelos en el administrador de django
+
+# en apps.py podremos registrar nuestra aplicacion 
+
+# el archivo de models.py nos permitira definir clases las cuales haran referencia a tablas
+# en la base de datos 
+
+## ya descargada la carpeta de productos ahora se debe instalar
+# para ello debemos ir al archivo apps.py dentro de la carpeta productos y copiar el nombre
+# de la clase si muestra errores cambiar al interprete creado llamado en este caso productly
+# de alli ir a settings.py y dentro de la lista llamada INSTALLED_APPS agregar el string
+# 'nombredelacarpeta.apps.clase' ejemplo en este caso 'productos.apps.ProductosConfig'
+
+# DESPUES DE REALIZAR ESTOS PASOS:
+ya podemos configurar nuestras rutas:
+1- ir productly y de alli a urls.py
+2- agregar ruta desde el listado urlpatterns agregarlo similar a admin:
+con el nombre de la ruta que queramos + , include('productos.urls') que es el nombre
+de la aplicacion que creamos osea productos y la propiedad de .urls es donde se almacenara pero .urls debemos
+crearlo dentro de la carpeta de la app creada (productos) <-- en este caso
+3- enseguida debemos agregar importar include desde django.urls en la seccion de arriba de importaciones
+
+# Ahora ya podemos crear el archivo de urls.py que indicamos que vamos a crear 
+dentro de la carpeta de productos que fue la app creada
